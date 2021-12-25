@@ -3,7 +3,7 @@ name: Ract CI
 on: 
   push:
     branches:
-      -"master"
+      - "master"
 
 jobs:
   build:
