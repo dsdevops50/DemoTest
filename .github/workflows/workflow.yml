@@ -29,8 +29,8 @@ jobs:
           # user credentials
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          echo "${{ secrets.EMAIL_USERNAME }}"
-          echo "${{ secrets.EMAIL_PASSWORD }}"
+          run: echo "${{ secrets.EMAIL_USERNAME }}"
+          run: echo "${{ secrets.EMAIL_PASSWORD }}"
           # email subject
           subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
           # email body as text
