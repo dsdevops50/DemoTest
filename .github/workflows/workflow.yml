@@ -29,6 +29,8 @@ jobs:
           # user credentials
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
+          run: |
+            echo $username
           # email subject
           subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
           # email body as text
@@ -37,4 +39,3 @@ jobs:
           to: dsyadav50@gmail.com
           # from email name
           from: Neeraj Singh
-          
