@@ -30,7 +30,6 @@ jobs:
           username: 'dsdevops50@gmail.com'
           password: '*Neeraj@50'
           
-          
           # email subject
           subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
           # email body as text
