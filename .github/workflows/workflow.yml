@@ -20,6 +20,7 @@ jobs:
       - run: npm test
 
       - name: Send mail
+      - bash: echo "${{ secrets.EMAIL_USERNAME }}"
         if: always()
         uses: dawidd6/action-send-mail@v2
         with:
@@ -29,7 +30,7 @@ jobs:
           # user credentials
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          - bash: echo "${{ secrets.EMAIL_USERNAME }}"
+          
           
           # email subject
           subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
