@@ -29,7 +29,8 @@ jobs:
           # user credentials
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          echo "${{username}}"
+          commands:
+            - echo "${{username}}"
           
           # email subject
           subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
