@@ -20,7 +20,7 @@ jobs:
       - run: npm test
 
       - name: Send mail
-        if: always()
+        if: failure()
         uses: dawidd6/action-send-mail@v2
         with:
           # mail server settings
@@ -29,8 +29,7 @@ jobs:
           # user credentials
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          run: |
-            echo $username
+          
           # email subject
           subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
           # email body as text
